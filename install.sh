@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 
-user=${id -u}
+user=$(id -u)
 
 if [ $user -eq 0 ]
 then
