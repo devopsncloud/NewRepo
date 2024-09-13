@@ -3,7 +3,7 @@
 
 echo "Please enter your username: " 
 
-read -s USERNAME
+read -p USERNAME
 
 echo "Please enter your password: "
 
