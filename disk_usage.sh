@@ -22,4 +22,6 @@ done <<< $DISK_USAGE
 
 echo -e "Message:\n$message"
 
+echo "$message" | mail -s "HIGH DISK USAGE ALERT !!!" kashapaka.devanshi@gmail.com
+
 
