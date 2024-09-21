@@ -23,7 +23,7 @@ do
 
 done
 
-if [ -z "$NAME" ] || [ -z "$GREETING"]
+if [ -z "$NAME" ] || [ -z "$GREETING"];
 then
     echo "ERROR:: Both -n and -g are Mandatory"
     USAGE
