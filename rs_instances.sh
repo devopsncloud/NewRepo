@@ -15,7 +15,7 @@ else
 fi
 
 
-aws ec2 run-instances --image-id $AMI_ID  --instance-type $INSTANCE_TYPE  --security-group-ids $SG_ID --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$i}]" --query 'Reservations[*].Instances[*].PublicIpAddress' --output text
+aws ec2 run-instances --image-id $AMI_ID  --instance-type $INSTANCE_TYPE  --security-group-ids $SG_ID --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$i}]" --query 'Reservations[0].Instances[0].PublicIpAddress' --output text
 
 # --query 'Reservations[*].Instances[*].[PrivateIpAddress]' --output text
 
