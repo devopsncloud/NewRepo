@@ -19,7 +19,7 @@ IP_ADDRESS=$(aws ec2 run-instances --image-id $AMI_ID  --instance-type $INSTANCE
 
 # --query 'Reservations[*].Instances[*].[PrivateIpAddress]' --output text
 
-echo "$!:$IP_ADDRESS"
+echo "$i:$IP_ADDRESS"
 
 
 
