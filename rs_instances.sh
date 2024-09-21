@@ -22,23 +22,23 @@ IP_ADDRESS=$(aws ec2 run-instances --image-id $AMI_ID  --instance-type $INSTANCE
 # --query 'Reservations[*].Instances[*].[PrivateIpAddress]' --output text
 
 echo "$i:$IP_ADDRESS"
-done
+
 
 aws route53 change-resource-record-sets \
   --hosted-zone-id "$HOSTED_ZONE_ID" \
-  --change-batch "
+  --change-batch '
   {
-    "Comment": "Testing creating a record set"
+    "Comment": "Creating a record set for cognito endpoint"
     ,"Changes": [{
       "Action"              : "CREATE"
       ,"ResourceRecordSet"  : {
         "Name"              : "$i.$DOMAIN_NAME"
         ,"Type"             : "A"
-        ,"TTL"              : 1
+        ,"TTL"              : 120
         ,"ResourceRecords"  : [{
             "Value"         : "$IP_ADDRESS"
         }]
       }
     }]
   }
-  "
+done
