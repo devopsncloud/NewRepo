@@ -27,5 +27,5 @@ if [ -z "$NAME" ] || [ -z "$GREETING"]
 then
     echo "ERROR:: Both -n and -g are Mandatory"
     USAGE
-    exit 1
+    exit 1;
 fi
