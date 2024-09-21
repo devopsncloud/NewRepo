@@ -2,4 +2,10 @@
 
 PERSON=$1
 
-echo "Hi $1, Good Morning"
+if [ -z $PERSON ]
+then 
+    echo " Please pass the argument"
+    exit 1
+else 
+    echo "Hi $1, Good Morning"
+fi
