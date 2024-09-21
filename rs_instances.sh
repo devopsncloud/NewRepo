@@ -2,9 +2,9 @@
 
 AMI_ID="ami-0b4f379183e5706b9"
 SG_ID="sg-0efaa853ee917a890"
-INSTANCES=("WEB" "CATALOGUE" "CART" "PAYMENT" "SHIPPING" "REDIS" "MYSQL" "MONGODB" "RABBITMQ" "USER" "DISPATCH")
-HOSTED_ZONE_ID=Z04039613RABGV7GUAUIJ
-DOMAIN_NAME=roboriya.shop
+INSTANCES=("web" "catalogue" "cart" "payment" "shipping" "redis" "mysql" "mongodb" "rabbitmq" "user" "dispatch")
+HOSTED_ZONE_ID="Z04039613RABGV7GUAUIJ"
+DOMAIN_NAME="roboriya.shop"
 
 for i in "${INSTANCES[@]}"
 do 
