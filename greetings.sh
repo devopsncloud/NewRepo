@@ -28,3 +28,5 @@ then
     USAGE
     exit 1
 fi
+
+echo "Hi $NAME, Happy $GREETING"
