@@ -16,6 +16,8 @@ do
     case $opt in
         n)NAME="OPTARG";;
         g)GREETING="OPTARG";;
+       \?) echo "Invalid Options: "$OPTARG" >&2; USAGE; exit;;
+        :) USAGE; exit;;
         h|*) USAGE; exit;;
     esac
 
