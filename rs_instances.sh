@@ -6,6 +6,7 @@ INSTANCES=("WEB" "CATALOGUE" "CART" "PAYMENT" "SHIPPING" "REDIS" "MYSQL" "MONGOD
 
 for i in "${INSTANCES[@]}"
 do 
+echo "Creating "$i" "
 if [[ "$i" == "MONGODB" ||  "$i" == "MYSQL"  ||  "$i" == "SHIPPING" ]]
 then
     INSTANCE_TYPE="t3.small"
@@ -14,7 +15,7 @@ else
 fi
 
 
-aws ec2 run-instances --image-id $AMI_ID  --instance-type $INSTANCE_TYPE  --security-group-ids $SG_ID
+aws ec2 run-instances --image-id $AMI_ID  --instance-type $INSTANCE_TYPE  --security-group-ids $SG_ID --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$}]
 
 
 done
