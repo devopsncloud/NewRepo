@@ -20,3 +20,10 @@ do
     esac
 
 done
+
+if [ -z "NAME" ] || [ -z "GREETING"]
+then
+    echo "ERROR:: Both -n and -g are Mandatory"
+    USAGE
+    exit 1
+fi
