@@ -16,16 +16,15 @@ do
     case $opt in
         n)NAME="OPTARG";;
         g)GREETING="OPTARG";;
-       \?) echo "Invalid Options: "$OPTARG" >&2; USAGE; exit;;
-        :) USAGE; exit;;
-        h|*) USAGE; exit;;
+       \?) echo "Invalid Options: "$OPTARG" >&2; USAGE; exit ;;
+        :) USAGE; exit ;;
+        h|*) USAGE; exit ;;
     esac
-
 done
 
-if [ -z "$NAME" ] || [ -z "$GREETING"];
+if [ -z "$NAME" ] || [ -z "$GREETING" ];
 then
     echo "ERROR:: Both -n and -g are Mandatory"
     USAGE
-    exit 1;
+    exit 1
 fi
