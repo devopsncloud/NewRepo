@@ -6,7 +6,7 @@ INSTANCES=("WEB" "CATALOGUE" "CART" "PAYMENT" "SHIPPING" "REDIS" "MYSQL" "MONGOD
 
 for i in "${INSTANCES[@]}"
 do 
-if [ "$i" == "MONGODB" ||  "$i" == "MYSQL"  ||  "$i" == "SHIPPING" ]
+if [[ "$i" == "MONGODB" ||  "$i" == "MYSQL"  ||  "$i" == "SHIPPING" ]]
 then
     INSTANCE_TYPE="t3.small"
 else    
